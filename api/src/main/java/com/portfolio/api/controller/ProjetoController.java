@@ -24,4 +24,22 @@ public class ProjetoController {
     public Projeto salvar(@RequestBody Projeto projeto) {
         return projetoService.salvar(projeto);
     }
+
+    // buscar por id — GET /projetos/1
+    @GetMapping("/{id}")
+    public Projeto buscarPorId(@PathVariable Long id) {
+        return projetoService.buscarPorId(id);
+    }
+
+    // atualizar — PUT /projetos/1
+    @PutMapping("/{id}")
+    public Projeto atualizar(@PathVariable Long id, @RequestBody Projeto projeto) {
+        return projetoService.atualizar(id, projeto);
+    }
+
+    // deletar — DELETE /projetos/1
+    @DeleteMapping("/{id}")
+    public void deletar(@PathVariable Long id) {
+        projetoService.deletar(id);
+    }
 }
