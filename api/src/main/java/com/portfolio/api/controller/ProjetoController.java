@@ -2,6 +2,7 @@ package com.portfolio.api.controller;
 
 import com.portfolio.api.model.Projeto;
 import com.portfolio.api.service.ProjetoService;
+import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -21,7 +22,7 @@ public class ProjetoController {
     }
 
     @PostMapping
-    public Projeto salvar(@RequestBody Projeto projeto) {
+    public Projeto salvar(@Valid @RequestBody Projeto projeto) {
         return projetoService.salvar(projeto);
     }
 
@@ -33,7 +34,7 @@ public class ProjetoController {
 
     // atualizar — PUT /projetos/1
     @PutMapping("/{id}")
-    public Projeto atualizar(@PathVariable Long id, @RequestBody Projeto projeto) {
+    public Projeto atualizar(@PathVariable Long id, @Valid @RequestBody Projeto projeto) {
         return projetoService.atualizar(id, projeto);
     }
 

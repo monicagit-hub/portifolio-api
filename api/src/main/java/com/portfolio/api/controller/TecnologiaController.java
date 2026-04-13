@@ -2,6 +2,7 @@ package com.portfolio.api.controller;
 
 import com.portfolio.api.model.Tecnologia;
 import com.portfolio.api.service.TecnologiaService;
+import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -21,7 +22,7 @@ public class TecnologiaController {
     }
 
     @PostMapping
-    public Tecnologia salvar(@RequestBody Tecnologia tecnologia) {
+    public Tecnologia salvar(@Valid @RequestBody Tecnologia tecnologia) {
         return tecnologiaService.salvar(tecnologia);
     }
 
@@ -33,7 +34,7 @@ public class TecnologiaController {
 
     // atualizar — PUT /projetos/1
     @PutMapping("/{id}")
-    public Tecnologia atualizar(@PathVariable Long id, @RequestBody Tecnologia tecnologia) {
+    public Tecnologia atualizar(@PathVariable Long id, @Valid @RequestBody Tecnologia tecnologia) {
         return tecnologiaService.atualizar(id, tecnologia);
     }
 

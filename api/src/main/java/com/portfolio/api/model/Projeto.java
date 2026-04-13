@@ -4,6 +4,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -15,10 +16,18 @@ import lombok.NoArgsConstructor;
 public class Projeto {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @NotBlank(message = "Nome é obrigatório")
     private String nome;
+
+    @NotBlank(message = "Descrição é obrigatória")
     private String descricao;
+
     private String imagemUrl;
     private String linkDemo;
+
+    @NotBlank(message = "Link do GitHub é obrigatório")
     private String linkGithub;
+
     private String documentacao;
 }
