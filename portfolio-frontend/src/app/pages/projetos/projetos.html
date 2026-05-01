@@ -1,1 +1,28 @@
-<p>projetos works!</p>
+<section class="projetos-container">
+  <h1>Meus Projetos</h1>
+
+  @if (projetos.length === 0) {
+  <p>Nenhum projeto encontrado.</p>
+  }
+
+  <div class="projetos-grid">
+    @for (projeto of projetos; track projeto.id) {
+    <div class="projeto-card">
+      @if (projeto.imagemUrl) {
+      <img [src]="projeto.imagemUrl" [alt]="projeto.nome">
+      }
+      <h2>{{ projeto.nome }}</h2>
+      <p>{{ projeto.descricao }}</p>
+      <div class="projeto-links">
+        @if (projeto.linkGithub) {
+        <a [href]="projeto.linkGithub" target="_blank">GitHub</a>
+        }
+        @if (projeto.linkDemo) {
+        <a [href]="projeto.linkDemo" target="_blank">Demo</a>
+        }
+        <a [routerLink]="['/projetos', projeto.id]">Ver detalhes</a>
+      </div>
+    </div>
+    }
+  </div>
+</section>
