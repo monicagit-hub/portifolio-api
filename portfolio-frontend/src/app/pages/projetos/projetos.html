@@ -1,12 +1,12 @@
 <section class="projetos-container">
   <h1>Meus Projetos</h1>
 
-  @if (projetos.length === 0) {
+  @if (projetos().length === 0) {
   <p>Nenhum projeto encontrado.</p>
   }
 
   <div class="projetos-grid">
-    @for (projeto of projetos; track projeto.id) {
+    @for (projeto of projetos(); track projeto.id) {
     <div class="projeto-card">
       @if (projeto.imagemUrl) {
       <img [src]="projeto.imagemUrl" [alt]="projeto.nome">

@@ -1,23 +1,22 @@
-import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, OnInit, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { ProjetoService, Projeto } from '../../services/projeto';
 
 @Component({
   selector: 'app-projetos',
-  imports: [CommonModule, RouterLink],
+  imports: [RouterLink],
   templateUrl: './projetos.html',
   styleUrl: './projetos.css'
 })
 export class Projetos implements OnInit {
 
-  projetos: Projeto[] = [];
+  projetos = signal<Projeto[]>([]);
 
-   constructor(private projetoService: ProjetoService) {}
+  constructor(private projetoService: ProjetoService) {}
 
   ngOnInit(): void {
     this.projetoService.listarTodos().subscribe(dados => {
-      this.projetos = dados;
+      this.projetos.set(dados);
     });
   }
 }
