@@ -1,1 +1,30 @@
-<p>projeto-detalhe works!</p>
+<section class="detalhe-container">
+  @if (projeto()) {
+  <a routerLink="/projetos" class="voltar">← Voltar para projetos</a>
+
+  @if (projeto()!.imagemUrl) {
+  <img [src]="projeto()!.imagemUrl" [alt]="projeto()!.nome" class="detalhe-img">
+  }
+
+  <h1>{{ projeto()!.nome }}</h1>
+  <p class="descricao">{{ projeto()!.descricao }}</p>
+
+  @if (projeto()!.documentacao) {
+  <div class="documentacao">
+    <h2>Documentação</h2>
+    <p>{{ projeto()!.documentacao }}</p>
+  </div>
+  }
+
+  <div class="detalhe-links">
+    @if (projeto()!.linkGithub) {
+    <a [href]="projeto()!.linkGithub" target="_blank" class="btn-primary">GitHub</a>
+    }
+    @if (projeto()!.linkDemo) {
+    <a [href]="projeto()!.linkDemo" target="_blank" class="btn-secondary">Ver Demo</a>
+    }
+  </div>
+  } @else {
+  <p>Carregando...</p>
+  }
+</section>

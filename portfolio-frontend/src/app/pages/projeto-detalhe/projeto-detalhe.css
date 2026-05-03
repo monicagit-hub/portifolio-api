@@ -1,0 +1,86 @@
+.detalhe-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.voltar {
+  display: inline-block;
+  margin-bottom: 24px;
+  color: #6c63ff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.voltar:hover {
+  text-decoration: underline;
+}
+
+.detalhe-img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 24px;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #222;
+  margin-bottom: 16px;
+}
+
+.descricao {
+  color: #555;
+  line-height: 1.7;
+  font-size: 1rem;
+  margin-bottom: 24px;
+}
+
+.documentacao {
+  background: #f0efff;
+  border-left: 4px solid #6c63ff;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+
+.documentacao h2 {
+  font-size: 1.1rem;
+  color: #6c63ff;
+  margin-bottom: 8px;
+}
+
+.detalhe-links {
+  display: flex;
+  gap: 16px;
+}
+
+.btn-primary {
+  padding: 12px 28px;
+  background: #6c63ff;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.btn-primary:hover {
+  background: #574fd6;
+}
+
+.btn-secondary {
+  padding: 12px 28px;
+  border: 2px solid #6c63ff;
+  color: #6c63ff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.btn-secondary:hover {
+  background: #6c63ff;
+  color: white;
+}

@@ -1,1 +1,44 @@
-<p>contato works!</p>
+<section class="contato-container">
+  <h1>Entre em Contato</h1>
+  <p class="subtitulo">Tem alguma oportunidade ou projeto? Me manda uma mensagem!</p>
+
+  <div class="contato-direto">
+    <a href="https://wa.me/5547XXXXXXXXX" target="_blank" class="contato-link whatsapp">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/whatsapp/whatsapp-original.svg" alt="WhatsApp">
+      WhatsApp
+    </a>
+    <a href="mailto:seuemail@gmail.com" class="contato-link gmail">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" alt="Gmail">
+      Gmail
+    </a>
+    <a href="https://linkedin.com/in/seuusuario" target="_blank" class="contato-link linkedin">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn">
+      LinkedIn
+    </a>
+  </div>
+
+  @if (enviado()) {
+  <div class="sucesso">
+    ✓ Mensagem enviada com sucesso!
+  </div>
+  }
+
+  <form class="contato-form" (ngSubmit)="enviar()">
+    <div class="form-group">
+      <label>Nome</label>
+      <input type="text" [(ngModel)]="nome" name="nome" placeholder="Seu nome" required>
+    </div>
+
+    <div class="form-group">
+      <label>Email</label>
+      <input type="email" [(ngModel)]="email" name="email" placeholder="seu@email.com" required>
+    </div>
+
+    <div class="form-group">
+      <label>Mensagem</label>
+      <textarea [(ngModel)]="mensagem" name="mensagem" rows="5" placeholder="Sua mensagem..." required></textarea>
+    </div>
+
+    <button type="submit">Enviar Mensagem</button>
+  </form>
+</section>

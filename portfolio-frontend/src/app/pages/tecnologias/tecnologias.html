@@ -1,1 +1,18 @@
-<p>tecnologias works!</p>
+<section class="tecnologias-container">
+  <h1>Tecnologias</h1>
+
+  @if (tecnologias().length === 0) {
+  <p>Nenhuma tecnologia cadastrada.</p>
+  }
+
+  <div class="tecnologias-grid">
+    @for (tec of tecnologias(); track tec.id) {
+    <div class="tec-card">
+      @if (tec.iconeUrl) {
+      <img [src]="tec.iconeUrl" [alt]="tec.nome">
+      }
+      <p>{{ tec.nome }}</p>
+    </div>
+    }
+  </div>
+</section>

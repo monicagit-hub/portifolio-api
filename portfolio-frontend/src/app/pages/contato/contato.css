@@ -1,0 +1,119 @@
+.contato-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.contato-container h1 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.subtitulo {
+  color: #666;
+  margin-bottom: 32px;
+}
+
+.sucesso {
+  background: #e8f5e9;
+  color: #2e7d32;
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  font-weight: 500;
+}
+.contato-direto {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+.contato-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.contato-link:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.contato-link img {
+  width: 24px;
+  height: 24px;
+}
+
+.whatsapp {
+  background: #25D366;
+  color: white;
+}
+
+.gmail {
+  background: #fff;
+  color: #333;
+  border: 1px solid #ddd;
+}
+
+.linkedin {
+  background: #0077B5;
+  color: white;
+}
+
+.contato-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #444;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #6c63ff;
+}
+
+button {
+  padding: 14px;
+  background: #6c63ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: #574fd6;
+}
