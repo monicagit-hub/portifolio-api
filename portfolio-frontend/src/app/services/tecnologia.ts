@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { environment } from '../../environments/environment';
 
 // interface que representa uma tecnologia
 export interface Tecnologia {
@@ -14,7 +15,7 @@ export interface Tecnologia {
 })
 export class TecnologiaService {
 
-  private apiUrl = 'http://localhost:8080/tecnologias';
+  private apiUrl = `${environment.apiUrl}/tecnologias`;
 
   constructor(private http: HttpClient) {}
 
