@@ -16,7 +16,7 @@ public class CorsConfig {
                 registry.addMapping("/**")
                         .allowedOrigins(
                                 "http://localhost:4200",
-                                "https://portifolio-api-zeta.vercel.app"
+                                "https://portifolio-5vu8ot6bj-monicas-projects-13d74484.vercel.app"
                         )
                         .allowedMethods("GET", "POST", "PUT", "DELETE")
                         .allowedHeaders("*");
